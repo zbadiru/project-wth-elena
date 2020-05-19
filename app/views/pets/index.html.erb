@@ -1,0 +1,5 @@
+<% @pets.each do |pet| %>
+
+<h5><%= link_to "#{pet.name}", pet_path(pet.id) %><h5>
+
+<% end %>

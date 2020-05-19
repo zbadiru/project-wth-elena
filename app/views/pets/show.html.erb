@@ -1,0 +1,9 @@
+<h1> Name: <%= @pet.name %></h1>
+<h2> Age: <%= @pet.age %> years old</h2>
+<h2> Gender: <%= @pet.gender %></h2>
+
+<nav><% @pet.adoptions.each do |adoption|%></nav>
+<h5><strong> Adoption Name: <%= link_to  "#{adoption.name}", adoption_path(adoption.id) %></strong></h5>
+<%end%>
+
+<%= link_to  "Back", pets_path %>
